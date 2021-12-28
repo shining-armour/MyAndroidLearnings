@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="shadow_style">
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">-5</item>
+        <item name="android:shadowDy">-2</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+</resources>

@@ -2,7 +2,7 @@
 Single Activity App demonstrating basic usage of TextView and ImageView in a Constraint Layout
 
 # Screenshot
-<img src="" width="250" height="400">
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Birthday_Card_App/screenshots/Screenshot_1.png" width="250" height="400">
 
 # Learnings
 

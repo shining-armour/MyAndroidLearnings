@@ -28,5 +28,5 @@ Tips
 
 Screenshots
 -----------
-<img src="" width="250" height="400">  <img src="" width="250" height="400"> <img src="" width="250" height="400">  <img src="" width="250" height="400"> <img src="" width="250" height="400">  
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Lemonade_App/screenshots/Screenshot_1.png" width="250" height="400">  <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Lemonade_App/screenshots/Screenshot_2.png" width="250" height="400"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Lemonade_App/screenshots/Screenshot_3.png" width="250" height="400">  <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Lemonade_App/screenshots/Screenshot_4.png" width="250" height="400"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Lemonade_App/screenshots/Screenshot_5.png" width="250" height="400">  
 

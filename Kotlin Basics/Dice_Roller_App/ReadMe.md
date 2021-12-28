@@ -2,10 +2,10 @@
 Two player dice roller game where players are expected to click the dices to generate random numbers on top faces of the dices. Whenever the lucky number 6 is achieved, the corresponding player is greeted with a congratulatory message in a SnackBar.
 
 ## Screenshots
-<img src="" width="250" height="400">   <img src="" width="250" height="400">  <img src="" width="250" height="400">
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Dice_Roller_App/screenshots/Screenshot_1.png" width="250" height="400">   <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Dice_Roller_App/screenshots/Screenshot_2.png" width="250" height="400">  <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Dice_Roller_App/screenshots/Screenshot_3.png" width="250" height="400">
 
 ## Updated Screenshots
-<img src="" width="250" height="400">    <img src="" width="400" height="250"> 
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Dice_Roller_App/screenshots/Screenshot_4.png" width="250" height="400">    <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Kotlin%20Basics/Dice_Roller_App/screenshots/Screenshot_5.png" width="400" height="250"> 
 
 # Learnings
 

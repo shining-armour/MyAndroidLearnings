@@ -2,7 +2,7 @@
 A single activity app displaying affirmations in a RecyclerView.
 
 # Screenshot
-<img src="" width="250" height="450"> 
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Affirmations_App/screenshots/Screenshot_1.png" width="250" height="450"> 
 
 # Learnings
 
@@ -51,14 +51,14 @@ A single activity app displaying affirmations in a RecyclerView.
   - Hooray! Your RecyclerView is ready to conquer the world of apps! 
   
 * For a list that changes periodically, extend your Adapter class with **ListAdapter** not *RecyclerView.Adapter*.
+
+* Unit tests runs locally on the m/c while Instrumentation test runs on the emulator.
   
 # Extensible topics
 * Handling item clicks
 * Animations for adding, updating and removing items
 * Pagination - applicable when your list is endlessly long.
 * ListAdapter - applicable when your list changes periodically.
-
-* Unit tests runs locally on the m/c while Instrumentation test runs on the emulator.
 
 # Questions
 

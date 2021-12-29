@@ -2,7 +2,7 @@
 An app showcasing RecyclerView with two types of LayoutManagers - LinearLayoutManager and GridLayoutManager.
 
 # Screenshots
-<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Dogglers_App/screenshots/Screenshot_2.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Dogglers_App/screenshots/Screenshot_2.png" width="250" height="450"> 
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Dogglers_App/screenshots/Screenshot_1.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Dogglers_App/screenshots/Screenshot_2.png" width="250" height="450"> 
 
 <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Dogglers_App/screenshots/Screenshot_3.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Dogglers_App/screenshots/Screenshot_4.png" width="250" height="450">
 

@@ -2,7 +2,9 @@
 A single activity app to calculate the tip amount based on user's experience at restaurants.
 
 # Screenshots
-<img src="" width="250" height="450"> <img src="" width="250" height="450"> <img src="" width="250" height="450"> <img src="" width="450" height="250">
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Tip_Calculator_App/screenshots/Screenshot_1.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Tip_Calculator_App/screenshots/Screenshot_2.png" width="250" height="450"> 
+
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Tip_Calculator_App/screenshots/Screenshot_3.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Layouts/Tip_Calculator_App/screenshots/Screenshot_4.png" width="450" height="250">
 
 # Learnings
 
@@ -22,8 +24,8 @@ A single activity app to calculate the tip amount based on user's experience at 
 * Formatting amount to currency -> *NumberFormat.getCurrencyInstance().format(amount)*
   
 * Hiding keyboard using **InputMethodManger**
-  *val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-  imm.hideSoftInputFromWindow(view.windowToken, 0)*
+  - *val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+  -  imm.hideSoftInputFromWindow(view.windowToken, 0)*
   
 * Regular Expressions for checking number in string : *string.contains("[0-9]".toRegex())*
   

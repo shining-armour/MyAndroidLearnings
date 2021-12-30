@@ -1,9 +1,10 @@
 # Dessert Clicker App
-App to understand activity lifecycle states.
+App to understand activity lifecycle callbacks.
 
 ## Screenshots
-![Screenshot_1.png](screenshots/Screenshot_1.png) ![Screenshot_2.png](screenshots/Screenshot_2.png)
-![Screenshot_3.png](screenshots/Screenshot_3.png) ![Screenshot_4.png](screenshots/Screenshot_4.png)
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Dessert_Clicker_App/screenshots/Screenshot_1.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Dessert_Clicker_App/screenshots/Screenshot_2.png" width="450" height="250"> 
+
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Dessert_Clicker_App/screenshots/Screenshot_3.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Dessert_Clicker_App/screenshots/Screenshot_4.png" width="250" height="450">
 
 # Learnings
 
@@ -19,23 +20,23 @@ App to understand activity lifecycle states.
 * onRestart() method is like onCreate(). Either onCreate() or onRestart() is called before the activity becomes visible. The onCreate() method is called only the first time, and onRestart() is called after that. onRestart() method is a place to put code that you only want to call if your activity is not being started for the first time.
 
 * Lifecycle callbacks when activity is rotated [data loss]
-  - <onCreate-onStart-onResume-onPause-onStop-onDestroy-onCreate-onStart-onResume>
+  - onCreate-onStart-onResume-onPause-onStop-onDestroy-onCreate-onStart-onResume
 
 * Lifecycle callbacks when app is sent to background using home button and retrieved again in foreground [no data loss]
-  - <onCreate-onStart-onResume-onPause-onStop-onRestart-onStart-onResume>
+  - onCreate-onStart-onResume-onPause-onStop-onRestart-onStart-onResume
 
 * Lifecycle callbacks when app is sent to background using back button and retrieved again in foreground [data loss]
-  - <onCreate-onStart-onResume-onPause-onStop-onDestroy-onCreate-onStart-onResume>
+  - onCreate-onStart-onResume-onPause-onStop-onDestroy-onCreate-onStart-onResume
 
 * Lifecycle callbacks when app loses focus due to on-screen dialog and later gains focus on closing dialog [no data loss]
-  - <onCreate-onStart-onResume-onPause-onResume>
+  - onCreate-onStart-onResume-onPause-onResume
   
 * onSaveInstanceState() method is a callback you use to save any data that you might need if the Activity is destroyed. It gives you a chance to save a small amount of information to a bundle as your activity exits the foreground.
 
 * onSaveInstanceState() is called just before onDestroy() and onRestoreInstanceState() is called just before onStart().
 
 * Fragment Lifecycle
-* ![f_lifecycle.jpg](screenshots/f_lifecycle.jpg)
+![f_lifecycle.jpg](screenshots/f_lifecycle.jpg)
 
 * Also similar to activities, the Fragment class provides many methods that you can override to respond to lifecycle events.
 - onCreate(): The fragment has been instantiated and is in the CREATED state. However, its corresponding view has not been created yet.

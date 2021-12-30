@@ -36,7 +36,7 @@ App to understand activity lifecycle callbacks.
 * onSaveInstanceState() is called just before onDestroy() and onRestoreInstanceState() is called just before onStart().
 
 * Fragment Lifecycle
-![f_lifecycle.jpg](screenshots/f_lifecycle.jpg)
+* ![f_lifecycle.jpg](screenshots/f_lifecycle.jpg)
 
 * Also similar to activities, the Fragment class provides many methods that you can override to respond to lifecycle events.
 - onCreate(): The fragment has been instantiated and is in the CREATED state. However, its corresponding view has not been created yet.

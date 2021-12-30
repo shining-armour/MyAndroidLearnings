@@ -7,8 +7,9 @@ Words app contains a scrollable list of 26 letters A to Z in a RecyclerView. The
 of the RecyclerView can be changed between a vertical list or a grid of items.
 
 # Screenshots
-![Screenshot_1.png](screenshots/Screenshot_1.png) ![Screenshot_2.png](screenshots/Screenshot_2.png)
-![Screenshot_3.png](screenshots/Screenshot_3.png) ![Screenshot_4.png](screenshots/Screenshot_4.png)
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Words_App/screenshots/Screenshot_1.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Words_App/screenshots/Screenshot_2.png" width="250" height="450"> 
+
+<img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Words_App/screenshots/Screenshot_3.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Words_App/screenshots/Screenshot_4.png" width="250" height="450">
 
 # Learnings
 
@@ -94,35 +95,35 @@ of the RecyclerView can be changed between a vertical list or a grid of items.
 # Questions
 
 * **onCreateView() vs onViewCreated()?**
-Ans - onCreateView is very specifically just about inflating and returning a view (via binding or just a layout inflater), nothing more. Then onViewCreated is where you do follow-on initialization (e.g. setting an adapter, observing ViewModel LiveData, etc).
+  - onCreateView is very specifically just about inflating and returning a view (via binding or just a layout inflater), nothing more. Then onViewCreated is where you do follow-on initialization (e.g. setting an adapter, observing ViewModel LiveData, etc).
 
 * **What exactly is a Bundle?**
-Ans - Think of it as a key-value pair used to pass data between classes, such as activities and fragments.
+  - Think of it as a key-value pair used to pass data between classes, such as activities and fragments.
   
 * **double-bang(!!) vs elvis (?:) vs safe-call(?.)?**
-Ans - double-bang(!!) - If a value is not null, return it otherwise throw NPE.[eg. val name = object!!.name ]
-    - safe-call(?.) - If a value is not null, return it otherwise return null. [eg. val name = object?.name]
-    - elvis-operator(?:) - If value one is not null, return it otherwise return value two on the other side of elvis operator. [eg. val name = object.name ?: "Default name"]
+  - double-bang(!!) - If a value is not null, return it otherwise throw NPE.[eg. val name = object!!.name ]
+  - safe-call(?.) - If a value is not null, return it otherwise return null. [eg. val name = object?.name]
+  - elvis-operator(?:) - If value one is not null, return it otherwise return value two on the other side of elvis operator. [eg. val name = object.name ?: "Default name"]
   
 * Lambdas vs Higher-Order Functions vs Callback Functions?
-Ans - A lambda is a *function without a name* that can be passed as an expression immediately. [e.g. { a: Int -> a * 3 }]
-    - A higher-order function means *passing a function to another function*, or *returning a function from another function*.
+  - A lambda is a *function without a name* that can be passed as an expression immediately. [e.g. { a: Int -> a * 3 }]
+  - A higher-order function means *passing a function to another function*, or *returning a function from another function*.
 
 * **URI vs URL vs URN?**
-Ans - ![url_uri_urn.jpg](screenshots/url_uri_urn.jpg)
-- URI stands (Uniform Resource Identifier) is a string of characters used to identify a name or a resource on the Internet. 
-- URL (Uniform Resource Locator) contains information about how to fetch a resource from its location. It always starts with a protocol name. 
-- URN (Uniform Resource Name) identifies a resource by name. It always starts with the prefix urn: or tel:.
-- All URLs and URNs are URIs, but not all URIs are URLs or URNs. URL, URN are subsets of URI.
-- Examples:
-  URL: ftp://ftp.is.co.za/rfc/rfc1808.txt
-  URL: http://www.ietf.org/rfc/rfc2396.txt
-  URL: ldap://[2001:db8::7]/c=GB?objectClass?one
-  URL: mailto:John.Doe@example.com
-  URL: telnet://192.0.2.16:80/
-  URN: urn:oasis:names:specification:docbook:dtd:xml:4.1.2
-  URN: tel:+1-816-555-1212
-  URN: urn:isbn:0451450523 
+* ![url_uri_urn.jpg](screenshots/url_uri_urn.jpg)
+  - URI stands (Uniform Resource Identifier) is a string of characters used to identify a name or a resource on the Internet. 
+  - URL (Uniform Resource Locator) contains information about how to fetch a resource from its location. It always starts with a protocol name. 
+  - URN (Uniform Resource Name) identifies a resource by name. It always starts with the prefix urn: or tel:.
+  - All URLs and URNs are URIs, but not all URIs are URLs or URNs. URL, URN are subsets of URI.
+  - Examples:
+    - URL: ftp://ftp.is.co.za/rfc/rfc1808.txt
+    - URL: http://www.ietf.org/rfc/rfc2396.txt
+    - URL: ldap://[2001:db8::7]/c=GB?objectClass?one
+    - URL: mailto:John.Doe@example.com
+    - URL: telnet://192.0.2.16:80/
+    - URN: urn:oasis:names:specification:docbook:dtd:xml:4.1.2
+    - URN: tel:+1-816-555-1212
+    - URN: urn:isbn:0451450523 
   
 * **How to persist the state of layout manager selected by user even when app is exited?**
   

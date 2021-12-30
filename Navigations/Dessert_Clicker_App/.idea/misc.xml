@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/Navigations/Dessert_Clicker_App/app/src/main/res/drawable/bakery_back.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/Navigations/Dessert_Clicker_App/app/src/main/res/drawable/cupcake.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/Navigations/Dessert_Clicker_App/app/src/main/res/drawable/icecreamsandwich.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/Navigations/Dessert_Clicker_App/app/src/main/res/drawable/jellybean.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/Navigations/Dessert_Clicker_App/app/src/main/res/drawable/kitkat.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/Navigations/Dessert_Clicker_App/app/src/main/res/drawable/white_box.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/cupcake.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/icecreamsandwich.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/jellybean.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/kitkat.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/lollipop.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/marshmallow.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/nougat.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/oreo.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/drawable/white_box.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/rafat/Desktop/MyAndroidLearnings/android-basics-kotlin-dessert-clicker-app-starter/app/src/main/res/layout/activity_main.xml" value="0.2907608695652174" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

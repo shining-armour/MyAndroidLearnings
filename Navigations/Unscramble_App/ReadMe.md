@@ -1,5 +1,5 @@
 # UnScramble App
-A Single Fragment Game App where the user have to guess the scrambled words. The app displays one scrambled word at a time, and the player has to guess the word using all the letters from the scrambled word. The player scores 20 points if the word is correct, otherwise the player can try any number of times. 
+A Single Fragment Game App where the user have to guess the scrambled words. The app displays one scrambled word at a time, and the player has to guess the word using all the letters from the scrambled word. The player scores 20 points if the word is correct, otherwise the player can try any number of times. There are total 10 words per game session.
 
 # Screenshots
 <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Unscramble_App/screenshots/Screenshot_1.png" width="250" height="450"> <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Navigations/Unscramble_App/screenshots/Screenshot_2.png" width="250" height="450"> 
@@ -35,42 +35,42 @@ A Single Fragment Game App where the user have to guess the scrambled words. The
   - Create your custom viewmodel class that extends ViewModel class.
     - *class MyViewModel : ViewModel() { // data goes here }*
   - Create a reference of the ViewModel inside fragment/activity using property delegate.
-    - *private val viewModel: MyViewModel by <delegate-class>()*
+    - *private val viewModel: MyViewModel by &lt;delegate-class&gt;()*
     - delegate class can be -> *activityViewModel, viewModel, customViewModelLazy*   
   - Using MutableLiveData, LiveData and backing property, create the properties that will hold the real-time data.
     - *private val _myPrivateMutableProperty = MutableLiveData(0)*
-    - *val myExposedImmutableProperty: LiveData<Int>*  
-          - *get() = _myPrivateMutableProperty*
+    - *val myExposedImmutableProperty: LiveData&lt;Int&gt;*  
+    - *get() = _myPrivateMutableProperty*
   - Create methods to change the values of those properties based on certain conditions inside the viewmodel class.
     - *private fun changeValue() { if (...) _myPrivateMutableProperty.value = ...}*
     
   - **There are two ways by which you can update the UI based on LiveData value**:
-    -1. Observe the LiveData using viewLifecycleOwner 
-      - *viewModel.myExposedImmutableProperty.observe(viewLifecycleOwner, {*
-         - *newData -> binding.myTextView.text = newData*
-          - *})*
-    -2. Use Databinding with binding expressions
-      - Enable data binding and add kotlin-kapt plugin in app's build.gradle:
-        - *buildFeatures { dataBinding true }*
-        - *id 'kotlin-kapt'*
-      - Wrap your root ViewGroup inside <layout> tag.
-      - Inside <data> tag, define viewModel variable having name and datatype (path of viewModel class). 
+    1. Observe the LiveData using viewLifecycleOwner 
+       - *viewModel.myExposedImmutableProperty.observe(viewLifecycleOwner, {*
+       - *newData -> binding.myTextView.text = newData*
+       - *})*
+    2. Use Databinding with binding expressions
+       - Enable data binding and add kotlin-kapt plugin in app's build.gradle:
+         - *buildFeatures { dataBinding true }*
+         - *id 'kotlin-kapt'*
+      - Wrap your root ViewGroup inside &lt;layout&gt; tag.
+      - Inside &lt;data&gt; tag, define viewModel variable having name and datatype (path of viewModel class). 
         - *<layout xmlns:android="http://schemas.android.com/apk/res/android"*
           - *xmlns:app="http://schemas.android.com/apk/res-auto"*
-          - *xmlns:tools="http://schemas.android.com/tools">*
-          - *<data>*
-          - *<variable*
+          - *xmlns:tools="http://schemas.android.com/tools" &gt;*
+          - *&lt;data&gt;*
+          - *&lt;variable*
           - *name="mylayoutViewModel"*
-          - *type="com.example.myapp.MyViewModel" />*
-          - *</data>*
+          - *type="com.example.myapp.MyViewModel" /&gt;*
+          - *&lt;/data&gt;*
           - *Rest of the layout....*
-        - *</layout>*
+        - *&lt;/layout&gt;*
       - Assign the viewModel instance that you created earlier in the fragment using property delegation to the data variable for the viewModel that you created.
         - *binding.mylayoutViewModel = viewModel*
         - Now, you don't need to observe the livedata values and this will reduce a lot of boilerplate code.
       - Binding expressions are written within the layout in the attribute properties (such as android:text) referencing the layout properties. When a change occurs in the LiveData, the ‘DB Library' will run your binding expressions (and thus updates the views).
         - *android:text="@{viewModel.myExposedImmutableProperty}"*  
-        - *<string name="exposed_property">Property Value: %d</string> -> android:text="@{@string/score(viewModel.myExposedImmutableProperty)}"*
+        - *If &lt;string name="exposed_property"&gt;Property Value: %d&lt;/string&gt; then, android:text="@{@string/exposed_property(viewModel.myExposedImmutableProperty)}"*
       
 * To protects the app data inside the ViewModel from unwanted and unsafe changes by external classes and also allow external callers to safely access its value.
   - **Inside the ViewModel**
@@ -113,16 +113,16 @@ A Single Fragment Game App where the user have to guess the scrambled words. The
   
 * **How does property delegation using *by* keyword works?**
   - Property delegation in Kotlin helps you to handoff the getter-setter responsibility to a different class. This class (called delegate class) provides getter and setter functions of the property and handles its changes. A delegate property is defined using the *by* clause and a delegate class instance.
-  - Syntax for property delegation -> *var <property-name> : <property-type> by <delegate-class>()*
+  - Syntax for property delegation -> *var &lt;property-name&gt; : &lt;property-type&gt; by &lt;delegate-class&gt;()*
   - In your app, if you initialize the view model using default GameViewModel constructor, like: *private val viewModel = GameViewModel()*
   - Then the app will lose the state of the viewModel reference when the device goes through a configuration change. For example, if you rotate the device, then the activity is destroyed and created again, and you'll have a new view model instance with the initial state again.
   - Instead, use the property delegate approach and delegate the responsibility of the viewModel object to a separate class called viewModels.
   - That means when you access the viewModel object, it is handled internally by the delegate class, viewModels. The delegate class creates the viewModel object for you on the first access, and retains its value through configuration changes and returns the value when requested.
   
 * **Delegate classes : viewModels() vs activityViewModels() vs customViewModelLazy()?**
-  - viewModels<>() -> Gives you the ViewModel *scoped to the current fragment*. [eg. private val viewModel by viewModels<MyViewModel>()]
-  - activityViewModels<>() -> Gives you the ViewModel *scoped to the current Activity* therefore it is alive until the activity is destroyed. If you get the same ViewModel by activityViewModels in another fragment you will get the same instance. [eg. private val activityViewModel by activityViewModels<MyViewModel>()]
-  - createViewModelLazy<>() ->  You can give your own ViewModelStore so that you *create your own scope*. [eg. private val customScopedViewModel by createViewModelLazy(MyViewModel::class, { viewModelStore // Or your custom ViewModelStore here })]  
+  - viewModels&lt;&gt;() -> Gives you the ViewModel *scoped to the current fragment*. [eg. *private val viewModel by viewModels&lt;MyViewModel&gt;()*]
+  - activityViewModels&lt;&gt;() -> Gives you the ViewModel *scoped to the current Activity* therefore it is alive until the activity is destroyed. If you get the same ViewModel by activityViewModels in another fragment you will get the same instance. [eg. *private val activityViewModel by activityViewModels&lt;MyViewModel&gt;()*]
+  - createViewModelLazy&lt;&gt;() ->  You can give your own ViewModelStore so that you *create your own scope*. [eg. *private val customScopedViewModel by createViewModelLazy(MyViewModel::class, { viewModelStore // Or your custom ViewModelStore here })*]  
   - Rule of thumb is if you want to share the same instance of viewModel across multiple fragments, use activityViewModel. If you want different instances for different fragments, use viewModel.
   
 * **What is meant by trailing lambda syntax?**

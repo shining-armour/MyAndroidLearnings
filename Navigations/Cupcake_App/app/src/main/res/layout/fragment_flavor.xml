@@ -1,0 +1,246 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FlavorFragment">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.cupcake.OrderViewModel" />
+        <variable
+            name="flavorFragment"
+            type="com.example.cupcake.FlavorFragment" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/side_margin">
+
+            <LinearLayout
+                android:id="@+id/flavor_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/vanilla_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <CheckBox
+                        android:id="@+id/vanilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vanilla"
+                        android:checked="@{vm.cupcakeFlavoursList.contains(@string/vanilla)}"
+                        android:onClick="@{() -> flavorFragment.handleCheckBoxCases(@string/vanilla)}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageButton
+                        android:id="@+id/vanilla_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_remove"
+                        app:layout_constraintEnd_toStartOf="@+id/vanilla_qty"
+                        app:layout_constraintTop_toTopOf="@+id/vanilla"
+                        app:layout_constraintBottom_toBottomOf="@+id/vanilla"
+                        android:onClick="@{() -> vm.removeCupcakes(@string/vanilla)}"
+                        />
+
+                    <TextView
+                        android:id="@+id/vanilla_qty"
+                        android:padding="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{vm.vanillaQuantity.toString()}"
+                        tools:text="1"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/vanilla_add"
+                        app:layout_constraintTop_toTopOf="@+id/vanilla"
+                        app:layout_constraintBottom_toBottomOf="@+id/vanilla"/>
+
+
+                    <ImageButton
+                        android:id="@+id/vanilla_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_add"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/vanilla"
+                        app:layout_constraintBottom_toBottomOf="@+id/vanilla"
+                        android:onClick="@{() -> vm.addCupcakes(@string/vanilla)}"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/chocolate_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/chocolate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chocolate"
+                        android:checked="@{vm.cupcakeFlavoursList.contains(@string/chocolate)}"
+                        android:onClick="@{() -> flavorFragment.handleCheckBoxCases(@string/chocolate)}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <ImageButton
+                        android:id="@+id/chocolate_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_remove"
+                        app:layout_constraintEnd_toStartOf="@+id/chocolate_qty"
+                        app:layout_constraintTop_toTopOf="@+id/chocolate"
+                        app:layout_constraintBottom_toBottomOf="@+id/chocolate"
+                        android:onClick="@{() -> vm.removeCupcakes(@string/chocolate)}"
+                        />
+
+                    <TextView
+                        android:id="@+id/chocolate_qty"
+                        android:padding="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{vm.chocolateQuantity.toString()}"
+                        tools:text="1"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/chocolate_add"
+                        app:layout_constraintTop_toTopOf="@+id/chocolate"
+                        app:layout_constraintBottom_toBottomOf="@+id/chocolate"/>
+
+
+                    <ImageButton
+                        android:id="@+id/chocolate_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_add"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/chocolate"
+                        app:layout_constraintBottom_toBottomOf="@+id/chocolate"
+                        android:onClick="@{() -> vm.addCupcakes(@string/chocolate)}"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/red_velvet_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/red_velvet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/red_velvet"
+                        android:checked="@{vm.cupcakeFlavoursList.contains(@string/red_velvet)}"
+                        android:onClick="@{() -> flavorFragment.handleCheckBoxCases(@string/red_velvet)}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <ImageButton
+                        android:id="@+id/red_velvet_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_remove"
+                        app:layout_constraintEnd_toStartOf="@+id/red_velvet_qty"
+                        app:layout_constraintTop_toTopOf="@+id/red_velvet"
+                        app:layout_constraintBottom_toBottomOf="@+id/red_velvet"
+                        android:onClick="@{() -> vm.removeCupcakes(@string/red_velvet)}"
+                        />
+
+                    <TextView
+                        android:id="@+id/red_velvet_qty"
+                        android:padding="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{vm.redVelvetQuantity.toString()}"
+                        tools:text = "1"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/red_velvet_add"
+                        app:layout_constraintTop_toTopOf="@+id/red_velvet"
+                        app:layout_constraintBottom_toBottomOf="@+id/red_velvet"/>
+
+
+                    <ImageButton
+                        android:id="@+id/red_velvet_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_add"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/red_velvet"
+                        app:layout_constraintBottom_toBottomOf="@+id/red_velvet"
+                        android:onClick="@{() -> vm.addCupcakes(@string/red_velvet)}"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flavor_options"
+                />
+
+            <TextView
+                android:id="@+id/subtotal"
+                style="@style/Widget.Cupcake.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                tools:text="@{@string/subtotal_price(vm.price)}" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                style="?attr/materialButtonOutlinedStyle"
+                app:layout_constraintEnd_toStartOf="@id/next_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/next_button"
+                android:layout_marginEnd="@dimen/margin_between_elements"
+                android:onClick="@{() -> flavorFragment.cancelOrder() }"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/side_margin"
+                android:text="@string/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cancel_button"
+                app:layout_constraintTop_toBottomOf="@id/subtotal"
+                android:onClick="@{() -> flavorFragment.goToNextScreen()}"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

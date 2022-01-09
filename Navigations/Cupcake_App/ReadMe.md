@@ -112,6 +112,9 @@ A cupcake ordering app that allows the user to create a order for desired no. of
 
 * **Error during test: java.lang.RuntimeException: Method i in android.util.Log not mocked.**
   - Comment every log statement that the test come across.
+  
+* **androidx.test.espresso.base.RootViewPicker$RootViewWithoutFocusException: Waited for the root of the view hierarchy to have window focus and not request layout for 10 seconds.**
+  - Close dialog on the emulator
 
 * **In one of the dev talks, it was said that "If you need a lifecycle in your viewModel, you totally need a transformation". Didn't understood this part.**
   

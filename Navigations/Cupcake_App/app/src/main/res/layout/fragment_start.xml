@@ -40,7 +40,7 @@
                 android:textColor="@color/material_on_background_emphasis_medium" />
 
             <Button
-                android:id="@+id/order_one_cupcake"
+                android:id="@+id/start_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

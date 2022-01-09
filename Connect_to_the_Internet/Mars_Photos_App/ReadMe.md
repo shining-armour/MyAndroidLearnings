@@ -3,6 +3,7 @@ An app that connects to a web service to retrieve and display the Mars photos.
 
 # Screenshots
 <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Connect_to_the_Internet/Mars_Photos_App/screenshots/Screenshot_1.png" width="250" height="450">  <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Connect_to_the_Internet/Mars_Photos_App/screenshots/Screenshot_2.png" width="250" height="450"> 
+
 <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Connect_to_the_Internet/Mars_Photos_App/screenshots/Screenshot_3.png" width="250" height="450">  <img src="https://github.com/shining-armour/MyAndroidLearnings/blob/main/Connect_to_the_Internet/Mars_Photos_App/screenshots/Screenshot_4.png" width="250" height="450"> 
 
 # Learnings
@@ -10,17 +11,17 @@ An app that connects to a web service to retrieve and display the Mars photos.
 * **Thread**
   - A thread is the smallest unit of code that can be scheduled and run in the confines of a program. 
   - A thread is an abstraction that you can use when writing code to determine which path of execution each instruction should go.
-  -```
-   fun main() {
-   val thread = Thread {
-     println("${Thread.currentThread()} has run.")
+  - ```
+    fun main() {
+    val thread = Thread {
+      println("${Thread.currentThread()} has run.")
      }
      thread.start()
-   }
-  ```
+    }
+   ```
   - ```
-     Thread[Thread-0,5,main] has run. 
-    ```
+     // Output: Thread[Thread-0,5,main] has run. 
+    ``` 
   - currentThread() returns a Thread instance which is converted to its string representation which returns the **thread's name, priority, and thread group.**
 
 * **Concurrency** 
@@ -236,10 +237,9 @@ An app that connects to a web service to retrieve and display the Mars photos.
              _status.value = MarsApi.retrofitService.getPhotos()
             } catch (e: Exception) {
              _status.value = "Failure: ${e.message}"
+             }
             }
-           }
-          } 
-        ``` 
+           } 
       - With Moshi Converter:
         - ```
           private val _listPhotos = MutableLiveData<List<MarsPhoto>>()

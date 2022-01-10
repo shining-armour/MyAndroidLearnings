@@ -38,7 +38,4 @@ class ViewModelTest1 {
         assertEquals(navController.currentDestination?.id, R.id.flavorFragment)
     }
 
-
-    @Test
-
 }

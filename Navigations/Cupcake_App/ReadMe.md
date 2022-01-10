@@ -27,11 +27,6 @@ A cupcake ordering app that allows the user to create a order for desired no. of
   - You can create an instance of SimpleDateFormat by passing in a pattern string and a locale: `SimpleDateFormat("E MMM d", Locale.getDefault())`
   - A pattern string like "E MMM d" is a representation of Date and Time formats. If the date is January 4 in 2018, the pattern string "EEE, MMM d" parses to "Wed, Jul 4".
   - A Locale object represents a specific geographical, political, or cultural region. Locale.getDefault() to retrieve the locale information set on the user's device and pass it into the SimpleDateFormat constructor.
-- ```
-   android:checked="@{viewModel.date.equals(viewModel.dateOptions[0])}"
-   android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[0])}"
-   android:text="@{viewModel.dateOptions[0]}"
-  ```
   
 * This will set the lifecycle owner on the binding object. By setting the lifecycle owner, the app will be able to observe LiveData objects.
   - ```

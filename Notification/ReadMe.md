@@ -1,0 +1,1 @@
+![notification_map](image/notification_map.png)
